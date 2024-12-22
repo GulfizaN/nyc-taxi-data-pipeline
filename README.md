@@ -82,6 +82,14 @@ Additionally, the project includes optional bonus features:
 
 3. **Load Data to Bigquery:**  
    Use `bq load` commands to load the processed data.
+    ```bash
+   bq load \
+   --source_format=PARQUET \
+   --replace \
+   ninth-iris-445112-n7:tlc_dataset.tripdata \
+   gs://tlc-taxi-data-processed/<timestamp>/combined_tripdata_transformed.parquet/*
+     ```
+**These commands were run on Google Cloud Shell**
 
 ### Automated Orchestration (Future-proofing)
 The DAG handles all the above steps, including:
@@ -111,8 +119,8 @@ The pipeline generates the following outputs:
    - Visualizations include average trip distance by hour, busiest days, and more.
 
 ### Additional Outputs
-- Weather-enhanced trip data is stored in BigQuery (`taxi_with_weatherID` table which is connected to `weather` table with the weatherID foreign key).
-- CSV files from BigQuery generated using Cloud Dataflow
+- Weather-enhanced trip data is stored in BigQuery.
+- CSV files from BigQuery generated using Cloud Dataflow.
 - An additional ccript converts CSV files to Excel format.
    - Example path: `gs://<bucket-name>/<timestamp>/combined_trip_data.xlsx/`
 
