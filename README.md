@@ -85,9 +85,10 @@ Additionally, the project includes optional bonus features:
 
 ### Automated Orchestration (Future-proofing)
 The DAG handles all the above steps, including:
-- Running the extraction script.
-- Triggering Dataproc for transformations.
-- Loading processed data into BigQuery.
+- Running the extraction script (if a data file is already in the bucket then it is skipped).
+- Triggering Dataproc for transformations and saving the processed data.
+- Appending processed data from the most recent folder into BigQuery.
+
 To deploy the DAG, upload it to your Cloud Composer environment and upload the scripts to a new bucket for Composer to access them.
 
 ---
