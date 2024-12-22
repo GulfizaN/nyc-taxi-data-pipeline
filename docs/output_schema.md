@@ -2,6 +2,7 @@
 
 ## `tripdata` Table
 - Contains processed NYC taxi trip data.
+- 
 - **Schema Definition:**
   | **Field Name**           | **Type**   | **Mode**   | **Description**                                      |
   |--------------------------|------------|------------|------------------------------------------------------|
@@ -65,5 +66,5 @@ The pipeline generates the following outputs in the GCS `processed` bucket:
    - Example path: `gs://<bucket-name>/<timestamp>/csv/`
 
 3. **Excel Files:**
-   - Converted from CSV format using Python scripts. Due to the enormous size of the files, it was computationally expensive to convert all data into .xlsx format and I terminated the process without converting all.
+   - Converted from CSV format using Python scripts.
    - Example path: `gs://<bucket-name>/<timestamp>/combined_trip_data.xlsx/`
