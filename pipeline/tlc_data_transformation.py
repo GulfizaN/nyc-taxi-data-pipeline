@@ -107,12 +107,12 @@ if yellow_combined:
 
 combined_data = green_combined.union(yellow_combined)
 
-# Drop rows where Trip_distance = 0 OR Trip_distance > 0 AND Total_amount = 0
+# Data cleaning
+# Drop rows where Trip_distance = 0 OR Trip_distance > 0 AND Total_amount = 0 (Since this is only 1.6% of the dataset)
 combined_data = combined_data.filter(
     (col("Trip_distance") > 0) & ~((col("Trip_distance") > 0) & (col("Total_amount") == 0))
 )
 
-# Cleaning logic
 # Replace negative values with absolute equivalents
 columns_to_clean = [
     "Fare_amount", "Tip_amount", "MTA_tax", "Tolls_amount",
