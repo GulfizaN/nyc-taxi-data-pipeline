@@ -24,11 +24,12 @@ This project implements a scalable ETL pipeline wntirely on GCP (Google Cloud Pl
 
 ---
 
-### Pipeline Orchestration
+## Pipeline Orchestration
 The pipeline is orchestrated using **Cloud Composer** (based on Apache Airflow). Tasks are scheduled and monitored to ensure reliable execution, including:
 - Triggering the extraction, transformation, and loading steps.
 - Managing dependencies between tasks.
 - Automatically processing newly available datasets in the NYC TLC dataset.
+**NOTE:** The DAG for this wasn't actually deployed due to cost constraints. 
 
 Additionally, the project includes optional bonus features:
 - **Weather Data Integration:** Enhances the dataset by joining weather attributes for advanced predictions.
