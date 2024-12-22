@@ -18,6 +18,7 @@ with open(CONFIG_PATH, "r") as config_file:
 # Extract values from the configuration
 INPUT_BUCKET = config["gcs"]["input_bucket"]
 PROCESSED_BUCKET = config["gcs"]["processed_bucket"]
+SCRIPTS_BUCKET = config["gcs"]["scripts_bucket"]  # Bucket to store scripts
 PROJECT_ID = config["bigquery"]["project_id"]
 DATASET = config["bigquery"]["dataset"]
 TRIPDATA_TABLE = config["bigquery"]["tables"]["tripdata"]
@@ -45,14 +46,22 @@ with DAG(
     catchup=False,
 ) as dag:
 
-    # Step 1: Extract Data
-    def extract_data():
+    # Step 1: Download and Run the Extraction Script
+    def download_and_run_extraction_script():
+        """Downloads the extraction script from GCS and runs it locally."""
+        client = storage.Client()
+        bucket = client.bucket(SCRIPTS_BUCKET)
+        blob = bucket.blob("tlc_data_extraction.py")
+        local_script_path = "/tmp/tlc_data_extraction.py"
+        blob.download_to_filename(local_script_path)
+        print(f"Downloaded extraction script to {local_script_path}")
+
         import subprocess
-        subprocess.run(["python3", "pipeline/tlc_data_extraction.py"])
+        subprocess.run(["python3", local_script_path])
 
     extract_task = PythonOperator(
         task_id="extract_data",
-        python_callable=extract_data,
+        python_callable=download_and_run_extraction_script,
     )
 
     # Step 2: Transform Data (Dataproc Job)
@@ -60,7 +69,7 @@ with DAG(
         "reference": {"project_id": PROJECT_ID},
         "placement": {"cluster_name": DATAPROC_CLUSTER},
         "pyspark_job": {
-            "main_python_file_uri": f"{PROCESSED_BUCKET}/tlc_data_transformation.py",
+            "main_python_file_uri": f"gs://{SCRIPTS_BUCKET}/tlc_data_transformation.py",
         },
         "properties": {
             "spark.jars.packages": SPARK_AVRO_PROPERTY,
