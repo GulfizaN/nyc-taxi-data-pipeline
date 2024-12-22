@@ -10,7 +10,7 @@ SELECT
   MAX(snow_ice_pellets) AS snow_ice_pellets
 FROM
   (
-    -- Using station numbers and WBAN found through NYC_weather_stations query
+    -- Filtering using some of the known weather station numbers in NY
     SELECT * FROM `bigquery-public-data.noaa_gsod.gsod2021` 
     WHERE (stn = '725030' AND wban = '14732') OR (stn = '725053' AND wban = '94728')
     UNION ALL
