@@ -22,6 +22,8 @@ This project implements a scalable ETL pipeline to process NYC Taxi trip data fo
 2. **Transformation:** Cleans, validates, and formats the data into Parquet and Avro formats for efficient storage.
 3. **Loading:** Loads the processed data into BigQuery for analysis and visualization.
 
+---
+
 ### Pipeline Orchestration
 The pipeline is orchestrated using **Cloud Composer** (based on Apache Airflow). Tasks are scheduled and monitored to ensure reliable execution, including:
 - Triggering the extraction, transformation, and loading steps.
@@ -60,7 +62,7 @@ Additionally, the project includes optional bonus features:
 
 ---
 
-## Run the pipeline.
+## Run the pipeline
 ### Manual Execution
 1. **Extract Data:**  
    Run the extraction script:
