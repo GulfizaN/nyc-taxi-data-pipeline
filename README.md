@@ -29,6 +29,7 @@ The pipeline is orchestrated using **Cloud Composer** (based on Apache Airflow).
 - Triggering the extraction, transformation, and loading steps.
 - Managing dependencies between tasks.
 - Automatically processing newly available datasets in the NYC TLC dataset.
+  
 **NOTE:** The DAG for this wasn't actually deployed due to cost constraints. 
 
 Additionally, the project includes optional bonus features:
