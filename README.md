@@ -1,5 +1,21 @@
 # NYC Taxi Data ETL Pipeline with Weather Integration
 
+## Table of Contents
+1. [Overview](#overview)
+2. [Pipeline Orchestration](#pipeline-orchestration)
+3. [Setup Instructions](#setup-instructions)
+   - [Prerequisites](#prerequisites)
+   - [Steps](#steps)
+4. [Run the Pipeline](#run-the-pipeline)
+   - [Manual Execution](#manual-execution)
+   - [Automated Orchestration](#automated-orchestration-future-proofing)
+5. [Outputs](#outputs)
+   - [Core Pipeline Outputs](#core-pipeline-outputs)
+   - [Additional Outputs](#additional-outputs)
+6. [Resources & Links](#resources--links)
+
+---
+
 ## Overview
 This project implements a scalable ETL pipeline to process NYC Taxi trip data for insights and analytics. The pipeline automates the following steps:
 1. **Extraction:** Downloads raw taxi data from the NYC TLC dataset.
@@ -89,8 +105,6 @@ The pipeline generates the following outputs:
 
 3. **Looker Studio Report:**
    - Visualizations include average trip distance by hour, busiest days, and more.
-
----
 
 ### Additional Outputs
 - Weather-enhanced trip data is stored in BigQuery (`taxi_with_weatherID` table which is connected to `weather` table with the weatherID foreign key).
