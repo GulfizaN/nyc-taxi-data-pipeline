@@ -2,6 +2,7 @@
   "gcs": {
     "input_bucket": "gs://tlc-taxi-data/",
     "processed_bucket": "gs://tlc-taxi-data-processed/"
+    "scripts_bucket": "gs://scripts/"
   },
   "bigquery": {
     "project_id": "ninth-iris-445112-n7",
