@@ -1,0 +1,20 @@
+{
+  "gcs": {
+    "input_bucket": "gs://tlc-taxi-data/",
+    "processed_bucket": "gs://tlc-taxi-data-processed/"
+  },
+  "bigquery": {
+    "project_id": "ninth-iris-445112-n7",
+    "dataset": "tlc_dataset",
+    "tables": {
+      "tripdata": "tripdata",
+      "taxi_with_weatherID": "taxi_with_weatherID",
+      "weather": "weather",
+    }
+  },
+  "dataproc": {
+    "cluster_name": "tlc-cluster",
+    "region": "us-central1",
+    "spark_avro_property": "org.apache.spark:spark-avro_2.12:3.5.1"
+  }
+}
