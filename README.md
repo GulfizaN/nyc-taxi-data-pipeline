@@ -72,12 +72,12 @@ Additionally, the project includes optional bonus features:
 
 2. **Transform Data:**  
    Submit the transformation job to Dataproc
- ```bash
+    ```bash
    gcloud dataproc jobs submit pyspark tlc_data_transformation.py \
        --cluster=your-cluster-name \
        --region=your-region \
        --jars=gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.29.0.jar \
-  ```
+     ```
    Ensure the `spark.jars.packages property` is set for Avro transformations.
 
 3. **Load Data to Bigquery:**  
