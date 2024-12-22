@@ -21,11 +21,5 @@
 
 ---
 
-## Weather Data Integration
-- Used NOAA GSOD dataset from Google BigQuery as it allowed simple and easy integration.
-- Filtered by known NYC stations (`stn = 725030`, `wban = 14732`).
-
----
-
 ## Orchestration Tool
 - Chose **Cloud Composer** over **Cloud Scheduler** for task orchestration due to dependency management and scalability.
