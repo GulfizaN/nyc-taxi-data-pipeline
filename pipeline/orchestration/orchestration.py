@@ -1,4 +1,4 @@
-# This is the planned DAG for pipeline automation and couldn't actually be implemented as I would've incurred high costs to set up a Kubernetes Engine
+# This is the planned DAG for pipeline automation and wasn't actually be implemented due to cost constraints as I would've incurred high costs for the set up of Kubernetes Engine
 
 from airflow import DAG
 from airflow.utils.dates import days_ago
