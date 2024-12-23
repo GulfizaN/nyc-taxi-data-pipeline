@@ -112,11 +112,13 @@ The pipeline generates the following outputs:
 
    <img width="262" alt="bucket2" src="https://github.com/user-attachments/assets/b45fab36-3203-47be-bc41-3c018fb320d8" />
 
+   [View Bucket Here](https://console.cloud.google.com/storage/browser/tlc-taxi-data-processed;tab=objects?forceOnBucketsSortingFiltering=true&hl=en&inv=1&invt=Abk0wA&project=ninth-iris-445112-n7)
+
 2. **BigQuery Tables:**
    - Processed data is stored in the `tripdata` table in the dataset.
    - Example: `project_id:dataset_id.tripdata`
      
-    [View Table Here](https://console.cloud.google.com/bigquery?ws=!1m5!1m4!4m3!1sninth-iris-445112-n7!2stlc_dataset!3stripdata)
+    [View Table Here]([https://console.cloud.google.com/bigquery?ws=!1m5!1m4!4m3!1sninth-iris-445112-n7!2stlc_dataset!3stripdata](https://console.cloud.google.com/bigquery?ws=!1m5!1m4!4m3!1sninth-iris-445112-n7!2stlc_dataset!3stripdata))
 
 3. **Looker Studio Report:**
    - Visualizations include average trip distance by hour, seasonal trends, and more.
@@ -126,10 +128,9 @@ The pipeline generates the following outputs:
 
 
 ### Additional Outputs
-- Weather-enhanced trip data is stored in BigQuery.
+- Weather-enhanced trip data is stored in BigQuery. [Access the Weather Table Here](https://console.cloud.google.com/bigquery?ws=!1m5!1m4!4m3!1sninth-iris-445112-n7!2stlc_dataset!3sweather)
 - CSV files from BigQuery generated using Cloud Dataflow.
-- An additional ccript converts CSV files to Excel format.
-   - Example path: `gs://<bucket-name>/<timestamp>/combined_trip_data.xlsx/`
+- An additional script converts CSV files to Excel format.
 
 ---
 
