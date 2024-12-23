@@ -116,8 +116,11 @@ The pipeline generates the following outputs:
    - Example: `project_id:dataset_id.tripdata`
 
 3. **Looker Studio Report:**
-   - Visualizations include average trip distance by hour, busiest days, and more.
-  
+   - Visualizations include average trip distance by hour, seasonal trends, and more.
+     
+   <img width="203" alt="trips by hr2" src="https://github.com/user-attachments/assets/96099f9d-bc34-4448-a460-a62d9b748b73" /> <img width="228" alt="monthly trip counts" src="https://github.com/user-attachments/assets/c30d4cba-6914-4107-b65e-56eb2cd7f934" />
+
+
 
 ### Additional Outputs
 - Weather-enhanced trip data is stored in BigQuery.
