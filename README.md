@@ -17,7 +17,7 @@
 ---
 
 ## Overview
-This project implements a scalable ETL pipeline wntirely on GCP (Google Cloud Platform) to process NYC Taxi trip data for insights and analytics. The pipeline automates the following steps:
+This project implements a scalable ETL pipeline entirely on GCP (Google Cloud Platform) to process NYC Taxi trip data for insights and analytics. The pipeline automates the following steps:
 1. **Extraction:** Downloads raw taxi data from the NYC TLC dataset into GCP Bucket.
 2. **Transformation:** Cleans, validates, and formats the data into Parquet and Avro formats for efficient storage.
 3. **Loading:** Loads the processed data into BigQuery for analysis and visualization.
