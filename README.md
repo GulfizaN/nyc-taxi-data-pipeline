@@ -129,4 +129,4 @@ The pipeline generates the following outputs:
 ## Resources & Links
 - **NYC TLC Dataset**: [NYC Open Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
 - **NOAA GSOD Dataset**: [Google Cloud Public Datasets](https://console.cloud.google.com/marketplace/product/noaa-public/gsod)
-- **Looker Studio Dashboard**: 
+
