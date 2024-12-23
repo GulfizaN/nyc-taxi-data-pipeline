@@ -117,6 +117,7 @@ The pipeline generates the following outputs:
 
 3. **Looker Studio Report:**
    - Visualizations include average trip distance by hour, busiest days, and more.
+  
 
 ### Additional Outputs
 - Weather-enhanced trip data is stored in BigQuery.
@@ -129,4 +130,5 @@ The pipeline generates the following outputs:
 ## Resources & Links
 - **NYC TLC Dataset**: [NYC Open Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
 - **NOAA GSOD Dataset**: [Google Cloud Public Datasets](https://console.cloud.google.com/marketplace/product/noaa-public/gsod)
+- **Looker Studio Report**: [NYC Taxi Trips Analysis](https://lookerstudio.google.com/reporting/93a155b0-87e0-4417-9001-9175124d7233)
 
