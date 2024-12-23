@@ -70,10 +70,10 @@ output_path_avro = f"{output_bucket}{timestamp}/combined_tripdata_transformed.av
 
 # Taxi types and years
 taxi_types = ["yellow", "green"]
-#current_year = datetime.now().year
-#start_year = current_year - 2
-current_year = 2023
-start_year = 2021
+current_year = datetime.now().year
+start_year = current_year - 2
+#current_year = 2023
+#start_year = 2021
 
 # Process and combine datasets for each taxi type
 yellow_combined = None
