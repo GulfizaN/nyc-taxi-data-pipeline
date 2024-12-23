@@ -1,3 +1,4 @@
+
 # NYC Taxi Data ETL Pipeline with Weather Integration
 
 ## Table of Contents
@@ -114,6 +115,8 @@ The pipeline generates the following outputs:
 2. **BigQuery Tables:**
    - Processed data is stored in the `tripdata` table in the dataset.
    - Example: `project_id:dataset_id.tripdata`
+     
+    [View Table Here](https://console.cloud.google.com/bigquery?ws=!1m5!1m4!4m3!1sninth-iris-445112-n7!2stlc_dataset!3stripdata)
 
 3. **Looker Studio Report:**
    - Visualizations include average trip distance by hour, seasonal trends, and more.
