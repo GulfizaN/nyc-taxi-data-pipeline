@@ -27,6 +27,7 @@ This project implements a scalable ETL pipeline entirely on GCP (Google Cloud Pl
 
 ## Pipeline Orchestration
 **NOTE:** The DAG for this wasn't actually deployed due to cost constraints but you can find the file for it in the pipeline folder. 
+
 The pipeline is orchestrated using **Cloud Composer** (based on Apache Airflow). Tasks are scheduled and monitored to ensure reliable execution, including:
 - Triggering the extraction, transformation, and loading steps.
 - Managing dependencies between tasks.
